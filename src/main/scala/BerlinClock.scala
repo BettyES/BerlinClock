@@ -20,14 +20,21 @@ class BClock(time: String){
   //var timesComplete = new Array[String](3)
   var timesComplete = time.split(":")
   var hh = timesComplete(0).toInt
-  var hh5: Int = hh/5
-  var hh1 = hh%5
+  var hh5: Int = hh / 5
+  var hh1 = hh % 5
 
-  for(x<-0 to hours5.length-1){
-    if(x < hh5){hours5(x) = "R"
-    }else{hours5(x) = "O"}
+  for (x <- 0 to hours5.length - 1) {
+    if (x < hh5) {
+      hours5(x) = "R"
+    } else {
+      hours5(x) = "O"
+    }
   }
-  //for(x<-0 to times(0).toInt){hours5(x) = "R"}
-
-  //}
+  for(x<-0 to hours1.length-1) {
+    if (x < hh1) {
+      hours1(x) = "R"
+    } else {
+      hours1(x) = "O"
+    }
+  }
 }
