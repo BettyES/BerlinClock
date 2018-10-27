@@ -3,9 +3,14 @@
 object BerlinClock {
 
   def main(args: Array[String]): Unit = {
-    var n = "02:00:00"
-    var ClockActual = new BClock(n)
+    println
 
+    var n = "11:00:00"
+    var ClockActual = new BClock(n)
+    println(ClockActual.hours5.mkString("|"))
+    println(ClockActual.hours1.mkString("|"))
+    println(ClockActual.minutes5.mkString("|"))
+    println(ClockActual.minutes1.mkString("|"))
   }
 
 }
@@ -44,11 +49,19 @@ class BClock(time: String){
 
   for (x <- 0 to minutes5.length - 1) {
     if (x < mm5 && (x+1) % 3 == 0) {
-      minutes5(x) = "Y"
-    } else if (x < mm5) {
       minutes5(x) = "R"
+    } else if (x < mm5) {
+      minutes5(x) = "Y"
     } else {
       minutes5(x) = "O"
+    }
+  }
+
+  for (x <- 0 to minutes1.length - 1) {
+    if (x < mm1 ) {
+      minutes1(x) = "Y"
+    } else {
+      minutes1(x) = "O"
     }
   }
 }
