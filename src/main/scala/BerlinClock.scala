@@ -43,7 +43,7 @@ class BClock(time: String){
   }
 
   for (x <- 0 to minutes5.length - 1) {
-    if (x < mm5 && x % 3 == 0) {
+    if (x < mm5 && (x+1) % 3 == 0) {
       minutes5(x) = "Y"
     } else if (x < mm5) {
       minutes5(x) = "R"
