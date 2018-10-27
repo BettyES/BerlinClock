@@ -24,7 +24,7 @@ class BClock(time: String){
   var hh1 = hh%5
 
   for(x<-0 to hours5.length-1){
-    if(x <= hh5){hours5(x) = "R"
+    if(x < hh5){hours5(x) = "R"
     }else{hours5(x) = "O"}
   }
   //for(x<-0 to times(0).toInt){hours5(x) = "R"}
