@@ -3,9 +3,10 @@
 object BerlinClock {
 
   def main(args: Array[String]): Unit = {
-    println
+    println("Enter the time with following format (hh:mm:ss):")
 
-    var n = "11:00:00"
+    var n = scala.io.StdIn.readLine()
+
     var ClockActual = new BClock(n)
     println(ClockActual.hours5.mkString("|"))
     println(ClockActual.hours1.mkString("|"))
